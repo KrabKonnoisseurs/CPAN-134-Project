@@ -1,34 +1,228 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Palanquin Dark", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Palanquin Dark", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 /* Navbar */
 #navbar {
-    box-shadow: 0 7px 3px -3px rgba(0, 0, 0, 0.1); 
-    background-color: #fff;
-    border-bottom: 30px solid #1CADE4;
+  background-color: #fff;
+  box-shadow: 0 7px 3px -3px rgba(0, 0, 0, 0.1);
+  border-bottom: 25px solid #1cade4;
 }
 .navbar-brand {
-    padding-left: 80px;
+  padding-left: 80px;
 }
 .navbar a {
-    font-weight: 600;
-    font-size: 15px;
+  font-weight: 600;
+  font-size: 15px;
 }
 .navbar ul li {
-    padding-left: 45px;
+  padding-left: 45px;
 }
 .navbar ul {
-    padding-top: 55px;
+  padding-top: 55px;
 }
 .navbar ul li.top {
-    margin-top: -70px;
-    margin-left: -35px
+  margin-top: -70px;
+  margin-left: -35px;
 }
 .navbar ul li.last {
+  margin-left: -15px;
+}
+.navbar .nvbr-cllp {
+  display: none;
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler .navbar-toggler-icon {
+  margin-top: 15px;
+  width: 75px;
+  min-height: 100px;
+}
+/* dropdown navbar (WIP) */
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 99px;
+  background-color: #fff;
+  cursor: pointer;
+  z-index: 999;
+}
+.menu-toggle:hover {
+  opacity: 0.8;
+}
+
+.hamburger {
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  z-index: 998;
+}
+
+.hamburger > span,
+.hamburger > span::before,
+.hamburger > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 99px;
+  background-color: #000;
+  transition-duration: 0.25s;
+}
+
+.hamburger > span::before {
+  content: "";
+  top: -8px;
+}
+.hamburger > span::after {
+  content: "";
+  top: 8px;
+}
+.menu-toggle.is-active .hamburger > span {
+  transform: rotate(45deg);
+}
+.menu-toggle.is-active .hamburger > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+.menu-toggle.is-active .hamburger > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.sidebar {
+  flex: 1 1 0;
+  max-width: 300px;
+  padding: 2rem 1rem;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  height: 100vh;
+  width: 100%;
+  max-width: 300px;
+  transition: 0.2s linear;
+  background-color: #000;
+  border: 5px double #fff;
+}
+.sidebar.is-active {
+  right: 0;
+}
+
+.sidebar h3 {
+  color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+.sidebar hr {
+  background-color: #f5bd02;
+  height: 5px;
+}
+.sidebar .menu {
+  margin: 0 -1rem;
+}
+
+.sidebar .menu .menu-item {
+  display: block;
+  padding: 1em;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s linear;
+}
+
+.sidebar .menu .menu-item:hover,
+.sidebar .menu .menu-item.is-active {
+  color: #f5bd02;
+  border-right: 5px solid #f5bd02;
+}
+
+.sidebar .menu .menu-item:hover {
+  border-right: 5px solid #f5bd02;
+  color: #f5bd02;
+}
+.menu a {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1190px) {
+  .navbar ul li.top {
+    margin-top: -70px;
+    margin-left: -85px;
+  }
+  .navbar ul li.last {
     margin-left: -15px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .navbar ul li {
+    padding-left: 25px;
+  }
+  .navbar ul li.top {
+    margin-top: -70px;
+    margin-left: -5px;
+  }
+  .navbar ul li.last {
+    margin-left: 5px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .navbar ul li {
+    padding-left: 20px;
+  }
+  .navbar ul li.top {
+    margin-top: -70px;
+    margin-left: -25px;
+  }
+  .navbar ul li.last {
+    margin-left: 15px;
+  }
+}
+@media screen and (max-width: 1055px) {
+  .navbar ul li {
+    padding-left: 17.5px;
+  }
+  .navbar ul li.top {
+    margin-top: -70px;
+    margin-left: -45px;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .navbar ul li {
+    padding-left: 17.5px;
+  }
+  .navbar ul li.top {
+    margin-top: -70px;
+    margin-left: -65px;
+  }
+  .navbar ul li.last {
+    margin-left: 5px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .navbar-brand {
+    padding-left: 50px;
+    margin-top: -15px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .navbar ul {
+    display: none;
+  }
 }
