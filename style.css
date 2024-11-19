@@ -32,13 +32,3 @@
 .navbar ul li.last {
     margin-left: -15px;
 }
-/* Navbar - Desktop (Adjusting) */
-@media screen and (max-width: 1380px) {
-
-}
-/* Navbar - Tablet  */
-@media screen and (max-width: 1040px) {
-    #navbar {
-        border-bottom: 5px solid #1CADE4;
-    }
-}
