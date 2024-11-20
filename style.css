@@ -157,52 +157,84 @@
   background-color: #C22034;
   width: 100%;
 }
+/* Footer */
 footer {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-style: normal;
+  font-family: "Palanquin", sans-serif;
+}
+footer i {
+  font-size: 25px;
+  font-style: normal;
+  font-family: "Palanquin", sans-serif;
+}
+footer a {
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-family: "Palanquin", sans-serif;
 }
 .top-footer {
   background-color: #0E5B77;
   color: #fff;
-  height: 80px;
-  display: flex;
-}
-.top-footer i{
-  font-size: 35px;
-}
-.top-footer ul {
-  padding: 15px 300px 15px 300px;
-}
-.top-footer ul li {
-  margin-left: -50px;
+  height: fit-content;
 }
 .bot-footer {
   background-color: #1D789A;
   color: #fff;
-  height: 70px;
+  height: fit-content;
   font-size: 14px;
-  display: flex;
 }
-.bot-footer ul {
-  padding: 15px 0 15px 100px;
+.bot-footer img {
+  margin-top: 8px;
+  margin-right: 30px;
 }
-.bot-footer ul li {
-  margin-left: -35px;
+.bot-footer a {
+  font-weight: 300;
 }
-.bot-footer ul li a {
-  display: inline-block;
+.bot-footer p {
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Palanquin", sans-serif;
 }
-.bot-footer ul li a:hover {
-  text-decoration: underline;
+.footer-links {
+  margin: 0;
+  padding: 7px 0 7px 0;
 }
-.bot-footer .right {
-  text-align: right;
-  padding-right: 50px;
-  padding-top: 5px;
+.bot-footer .footer-links {
+  font-weight: 400;
 }
-.bot-footer img{
-  width: 50px;
-  height: 60px;
-  margin-right: 35px;
+/* Footer Media Queries */
+@media screen and (max-width: 991px) {
+  footer a {
+    font-size: 13px;
+    text-align: center;
+  }
+  footer i {
+    font-size: 22.5px;
+  }
+  .bot-footer p {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 800px) {
+  footer a {
+    font-size: 12px;
+    text-align: center;
+  }
+  footer i {
+    font-size: 20px;
+  }
+  .bot-footer img {
+    width: 40px;
+    height: 50px;
+  }
+  .bot-footer p {
+    font-size: 12px;
+  }
 }
 /* Navbar Media Queries */
 @media screen and (max-width: 1365px) {
@@ -305,9 +337,10 @@ footer {
   .hamburger {
     width: 24px;
   }
+}
+@media screen and (max-width: 400px) {
   .navbar-brand {
-    margin-top: -20px;
-    margin-bottom: -10px;
-
+    width: 70px;
+    height: 80px;
   }
 }
