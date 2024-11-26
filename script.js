@@ -1,7 +1,12 @@
-const menu_toggle = document.querySelector(".menu-toggle");
-const collapse = document.querySelector(".collapse-bar");
+const menuToggle = document.querySelector('.menu-toggle');
+const collapseBar = document.querySelector('.collapse-bar');
 
-menu_toggle.addEventListener("click", () => {
-  menu_toggle.classList.toggle("is-active");
-  collapse.classList.toggle("is-active");
+menuToggle.addEventListener('click', function () {
+  collapseBar.classList.toggle('is-active');
+  menuToggle.classList.toggle('is-active');
+  if (collapseBar.classList.contains('is-active')) {
+    collapseBar.classList.add('is-sticky');
+  } else {
+    collapseBar.classList.remove('is-sticky');
+  }
 });

@@ -61,6 +61,7 @@
   border-radius: 99px;
   cursor: pointer;
   z-index: 1002;
+  transition: opacity 0.3s ease;
 }
 .menu-toggle:hover {
   opacity: 0.8;
@@ -72,6 +73,7 @@
   transform: translate(-50%, -50%);
   width: 32px;
   z-index: 1002;
+  transition: transform 0.3s ease-in-out;
 }
 .hamburger > span,
 .hamburger > span::before,
@@ -108,15 +110,22 @@
   max-width: 100%;
   padding: 2rem 1rem;
   position: absolute;
+  background-color: #fff;
   top: -1000px;
   min-height: 300px;
   width: 100%;
-  transition: 0.2s linear;
+  transition: top 0.3s ease;
   border-top: 7.5px solid #64D4FF;
   box-shadow: 0 7px 3px -3px rgba(0, 0, 0, 0.1);
+  z-index: 999;
 }
 .collapse-bar.is-active {
   top: 165px;
+}
+.collapse-bar.is-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 .collapse-bar hr {
   background-color: #000;
