@@ -1,0 +1,11 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:url(https://i.etsystatic.com/10868806/r/il/6e5775/4079544308/il_fullxfull.4079544308_c7w1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#nav-bar {
+    background-color: white;
+    color: black;
+}
