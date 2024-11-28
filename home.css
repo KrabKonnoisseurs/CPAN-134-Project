@@ -152,3 +152,54 @@ section {
     background-color: rgba(255, 255, 255, 0.815);
 }
 
+#navbar.scrolled {
+    background-color: var(--secondary-colors);
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  /* Mobile-first styles (already in place) */
+
+/* Adjustments for Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar ul li {
+      padding-left: 20px; /* Reduce padding */
+    }
+  
+    .containerDeals h1,
+    .container h1 {
+      font-size: 60px; /* Adjust title size */
+    }
+  
+    .cardDeals img {
+      max-width: 120px;
+    }
+  }
+  
+  /* Adjustments for Smaller Devices (Phones) */
+  @media (max-width: 767px) {
+    .navbar .container-fluid {
+      padding-left: 10px;
+    }
+  
+    .navbar ul li {
+      padding-left: 10px;
+      text-align: center;
+    }
+  
+    .cardSpecial,
+    .cardDeals {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .containerDeals h1,
+    .container h1 {
+      font-size: 40px; /* Smaller titles */
+    }
+  
+    .cardSpecial img,
+    .cardDeals img {
+      max-width: 100px;
+    }
+  }
+  
