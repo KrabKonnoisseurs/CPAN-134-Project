@@ -18,6 +18,13 @@
 #navbar.no-shadow {
   box-shadow: none;
 }
+.blur-active {
+  filter: blur(3.5px);
+  pointer-events: none;
+}
+#navbar, .collapse-bar, .menu-toggle {
+  filter: none !important;
+}
 .navbar-brand {
   padding-left: 60px;
   margin-top: -15px;
