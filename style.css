@@ -210,10 +210,6 @@ footer a {
   height: fit-content;
   font-size: 14px;
 }
-.bot-footer img {
-  margin-top: 8px;
-  margin-right: 30px;
-}
 .bot-footer a {
   font-weight: 300;
 }
@@ -228,6 +224,10 @@ footer a {
 }
 .bot-footer .footer-links {
   font-weight: 400;
+  display: inline-block;
+}
+.bot-footer .footer-links .list-inline-item:hover {
+  text-decoration: underline;
 }
 /* About Page */
 .title {
@@ -306,6 +306,16 @@ footer a {
   }
   .bot-footer p {
     font-size: 12px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .bot-footer .bot-img {
+    padding-right: 135px;
+  }
+  .bot-footer .padding {
+    padding-left: 135px;
+    margin-right: -90px;
+    justify-content: space-evenly;
   }
 }
 /* Navbar Media Queries */
