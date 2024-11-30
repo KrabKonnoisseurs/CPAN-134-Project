@@ -30,6 +30,10 @@
   margin-top: -15px;
   margin-bottom: -10px;
 }
+.navbar-brand img {
+  width: 100px; 
+  height: 115px;
+}
 .navbar a {
   font-weight: 600;
   font-size: 15px;
@@ -405,6 +409,18 @@ footer a {
     margin-left: 5px;
   }
 }
+@media (max-width: 992px) {
+  .navbar-brand img {
+    width: 80px;  
+    height: 90px; 
+  }
+  .menu-toggle {
+    top: 1.85rem;
+  }
+  .collapse-bar.is-sticky {
+    top: 127px;
+  }
+}
 @media screen and (max-width: 991px) {
   .navbar-brand {
     padding-left: 50px;
@@ -436,6 +452,18 @@ footer a {
   }
   .about-employees .col-md-6 {
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .navbar-brand img {
+    width: 60px; 
+    height: 70px;
+  }
+  .menu-toggle {
+    top: 0.84rem;
+  }
+  .collapse-bar.is-sticky {
+    top: 107px;
   }
 }
 @media screen and (max-width: 400px) {
