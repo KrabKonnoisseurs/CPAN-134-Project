@@ -308,14 +308,24 @@ footer a {
     font-size: 12px;
   }
 }
-@media screen and (min-width: 800px) {
-  .bot-footer .bot-img {
-    padding-right: 135px;
+@media screen and (min-width: 1000px) {
+  .bot-footer .footer-links {
+    margin-right: 200px;
   }
-  .bot-footer .padding {
-    padding-left: 135px;
-    margin-right: -90px;
-    justify-content: space-evenly;
+}
+@media screen and (max-width: 1310px) and (min-width: 901px) {
+  .bot-footer .footer-links {
+    margin-right: 75px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  .bot-footer .footer-links {
+    margin-right: 25px;
+  }
+}
+@media screen and (max-width: 940px) and (min-width: 768px){
+  .bot-footer img {
+    margin-left: -100px;
   }
 }
 /* Navbar & About Page Media Queries */
