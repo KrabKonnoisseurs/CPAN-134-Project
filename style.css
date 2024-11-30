@@ -318,7 +318,7 @@ footer a {
     justify-content: space-evenly;
   }
 }
-/* Navbar Media Queries */
+/* Navbar & About Page Media Queries */
 @media screen and (max-width: 1365px) {
   .navbar ul li.top {
     margin-left: -45px;
@@ -424,7 +424,6 @@ footer a {
   .about-employees .col-md-4 img {
     margin-bottom: 30px;
   }
-
   .about-employees .col-md-6 {
     margin-bottom: 20px;
   }
