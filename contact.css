@@ -31,3 +31,19 @@ form {
     box-shadow: 0px 4px 6px rgba(red, green, blue, alpha);
     margin-bottom: 25px;
 }
+
+h1 {
+    color: darkblue;
+    font-size: medium;
+    margin-bottom: 17px;
+
+}
+
+form .btn-btn-primary:hover {
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 3px;
+}
+    
