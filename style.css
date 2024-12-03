@@ -187,9 +187,8 @@
   border-bottom: 5px solid #c22034;
 }
 .collapse-bar a.menu-item.active  {
-  color: #fff;
   border-radius: 5px;
-  background-color: #c22034;
+  background-color: #ececec;
 }
 /* Footer */
 footer {
@@ -215,6 +214,9 @@ footer a {
   background-color: #0e5b77;
   color: #fff;
   height: fit-content;
+}
+.top-footer img {
+  width: 35px;
 }
 .bot-footer {
   background-color: #1d789a;
@@ -252,7 +254,7 @@ footer a {
   color: #fff;
 }
 .about-container {
-  background: url(images/BG/BG.png);
+  background: url(images/BG/BGDesktop.png);
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -301,14 +303,15 @@ footer a {
 }
 /* Rewards Page */
 .rewards-container {
-  background: url(images/BG/BG.png);
+  background: url(images/BG/BGDesktop.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 900px;
+  height: fit-content;
 }
 .rewards-content {
-  padding: 100px 0;
+  padding-top: 70px;
+  padding-bottom: 50px;
 }
 .rewards-header {
   background-color: #c22034;
@@ -321,6 +324,10 @@ footer a {
   border: 2px solid #0e5b77;
   border-radius: 8px;
   margin-bottom: 15px;
+}
+.rewards-container .card img {
+  margin-right: 7px;
+  margin-left: 5px;
 }
 .rewards-container .btn-krusty {
   background-color: #c22034;
@@ -500,8 +507,14 @@ footer a {
   .about-employees .col-md-6 {
     margin-bottom: 20px;
   }
-  .rewards-container .rewards-content {
-    padding: 50px auto;
+  .rewards-container, .about-container {
+    background: url(images/BG/BGTablet.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .top-footer img {
+    width: 25px;
   }
 }
 @media (max-width: 576px) {
@@ -520,5 +533,13 @@ footer a {
   .navbar-brand {
     width: 70px;
     height: 80px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .rewards-container, .about-container {
+    background: url(images/BG/BGPhone.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
