@@ -1,3 +1,6 @@
+//home.js
+
+
 // Smooth Scrolling for Anchors
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
