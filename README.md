@@ -1,5 +1,0 @@
-# CPAN-134-Project
-
-THE KRUSTY KRAB PIZZA. IS THE PIZZA.
-
-test
