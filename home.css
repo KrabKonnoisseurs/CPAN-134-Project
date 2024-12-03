@@ -13,6 +13,9 @@
     --highlight-colors: #c22034;
 }
 
+h1 {
+    font-weight: 700;
+}
 
 body {
     background-color: var(--primary-colors);
@@ -20,41 +23,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; /* Ensures the content is centered vertically */
-    margin: 0;
-}
-
-/* Navbar */
-#navbar {
-    box-shadow: 0 7px 3px -3px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    border-bottom: 30px solid var(--primary-colors);
-}
-
-.navbar-brand {
-    padding-left: 80px;
-}
-
-.navbar a {
-    font-weight: 600;
-    font-size: 15px;
-}
-
-.navbar ul li {
-    padding-left: 45px;
-}
-
-.navbar ul {
-    padding-top: 55px;
-}
-
-.navbar ul li.top {
-    margin-top: -70px;
-    margin-left: -35px
-}
-
-.navbar ul li.last {
-    margin-left: -15px;
+    min-height: 100vh;
+    margin: 0px;
+    padding: 40px;
+    background-image: url(Krusty_Krab_Interior.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    max-width: 100%;
 }
 
 section {
@@ -62,28 +38,22 @@ section {
     align-content: center;
 }
 
-.summerSection {
-    display: flex;
-    flex-direction: row;  /* Arrange the items in a row */
-    gap: 20px;  /* Add some space between the items */
-    justify-content: space-around;  /* Space the items evenly */
-    flex-wrap: wrap;  /* Allow items to wrap to the next line if they don't fit */
-    padding: 40px 20px;  /* Add padding around the section */
-
-}
 .container {
     text-align: center;
+    justify-content: space-between;
 }
 
 .containerDeals {
     text-align: center;
     background-color: white;
-    width: 100%;  /* Make it take full width of the parent */
-    max-width: 1400px;  /* Increased max-width */
+    width: 100%;
+    max-width: 1400px;
     border-radius: 25px;
     align-self: center;
-    padding: 40px;  /* Increased padding for better spacing */
-    margin: 20px auto;  /* Centered with margin */
+    padding: 40px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .containerDeals h1 {
@@ -92,6 +62,7 @@ section {
     color: var(--highlight-colors);
     font-size: 100px;
     -webkit-text-stroke: 1px white;
+    font-weight: 700;
 }
 
 .container h1 {
@@ -109,40 +80,34 @@ section {
     -webkit-text-stroke: 1px var(--secondary-colors);
 }
 
-.cardDeals {
-    display: flex;
-    flex-direction: column; /* Stack image and text vertically */
-    align-items: center; /* Center the content horizontally */
-    padding: 10px;
-    max-width: 600px;
-    margin: 10px auto;
+.card {
+    margin: 15px;
+    flex: 1 1 calc(33.33% - 30px);
+    box-sizing: border-box;
+    transform: 0.3s ease;
+    align-items: center;
 }
 
-.card-body1 {
-    background-color: rgba(158, 158, 158, 0.637);
-    max-width: 600px;
-    padding: 10px; /* Ensure there's space inside the card body */
-    margin-top: 10px; /* Add space between the image and the text */
-    text-align: center; /* Center the text */
-    width: 100%;
-}
-
-.cardDeals p{
-    text-align: left;
-    margin: 0;
+.card img {
+    padding-top: 10px;
     border-radius: 8px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .cardSpecial {
     background-color: rgba(0, 0, 0, 0.5) !important;
     border-radius: 8px;
     padding: 10px;
-    max-width: 850px; /* Limit the card width */
-    margin: 10px auto; /* Center and reduce margin */
+    max-width: 850px;
+    margin: 10px auto;
 }
 
 .cardSpecial img {
-    max-width: 600px;  /* Increase max-width to make images larger */
+    max-width: 600px;
     height: auto;
     border-radius: 4px;
 }
@@ -152,82 +117,95 @@ section {
 }
 
 .cardSpecial .small-text {
-    font-size: 14px; 
+    font-size: 14px;
     color: white;
     line-height: 1.4;
 }
 
 .cardSpecial .btn-primary {
-    padding: 5px 10px; 
+    padding: 5px 10px;
     font-size: 12px;
     margin-top: 5px;
 }
 
-
-
-
-.btn-primary{
+.btn-primary {
     background-color: var(--highlight-colors);
 }
-.btn-primary:hover{
+
+.btn-primary:hover {
     background-color: #c73d4d;
 }
-.btn-primary1{
+
+.btn-primary1 {
     background-color: white;
-    color: black
+    color: black;
 }
-.btn-primary1:hover{
+
+.btn-primary1:hover {
     background-color: rgba(255, 255, 255, 0.815);
 }
 
 #navbar.scrolled {
     background-color: var(--secondary-colors);
     transition: background-color 0.3s ease-in-out;
-  }
+}
 
-  /* Mobile-first styles (already in place) */
+.card img,
+.cardSpecial img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+}
 
-/* Adjustments for Tablets */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
-    .navbar ul li {
-      padding-left: 20px; /* Reduce padding */
+    .containerDeals {
+        flex-direction: column;
+        padding: 20px;
     }
-  
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+        flex: 1 1 auto;
+    }
+
+    .card img {
+        max-width: 100%;
+        height: auto;
+    }
+
     .containerDeals h1,
     .container h1 {
-      font-size: 60px; /* Adjust title size */
+        font-size: 60px;
     }
-  
-    .cardDeals img {
-      max-width: 120px;
+}
+
+@media (max-width: 767px) {
+    .containerDeals {
+        flex-direction: column;
+        padding: 10px;
     }
-  }
-  
-  /* Adjustments for Smaller Devices (Phones) */
-  @media (max-width: 767px) {
-    .navbar .container-fluid {
-      padding-left: 10px;
+
+    .card {
+        width: 100%;
+        margin-bottom: 15px;
     }
-  
-    .navbar ul li {
-      padding-left: 10px;
-      text-align: center;
+
+    .card img {
+        max-width: 100%;
+        height: auto;
     }
-  
-    .cardSpecial,
-    .cardDeals {
-      flex-direction: column;
-      align-items: center;
-    }
-  
+
     .containerDeals h1,
     .container h1 {
-      font-size: 40px; /* Smaller titles */
+        font-size: 36px;
     }
-  
-    .cardSpecial img,
-    .cardDeals img {
-      max-width: 100px;
-    }
-  }
-  
+}
