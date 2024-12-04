@@ -12,3 +12,6 @@ Double-click to the open the .html files.
 ## Contribution guidelines
 Each contributor should submit atleast one (1) fully constructed .html file that was self-assigned to them in the project backlog, alongside optionally one (1) or multiple custom .css file that the .html file will use.
 Theming of the .html file should be consistent will all other .html files.
+
+## Link
+Head over to the live website [here](https://krabkonnoisseurs.github.io/CPAN-134-Project/home.html)
