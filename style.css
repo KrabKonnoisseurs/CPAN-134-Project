@@ -337,6 +337,88 @@ footer a {
   background-color: #b01c2d;
   color: white;
 }
+
+/* Menu / Galley Grub Page */
+.grubmenu-container {
+  background: url(images/BG/BGDesktop.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: fit-content;
+  padding: 0 20px;
+}
+
+.grubmenu-content {
+  padding-top: 40px;
+  padding-bottom: 50px;
+  background: rgba(14, 91, 119, 0.8); 
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.grubmenu-container h3 {
+  text-shadow: 0px 4px 4px rgba(91, 91, 91, 0.4);
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #c22034; 
+  padding-bottom: 5px;
+}
+
+.grubmenu-small {
+  color: #4d4d4d;
+}
+
+.grubmenu-container .list-group {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 8px;
+  background-color: rgba(149, 225, 255, 0.2);
+}
+
+.grubmenu-container .list-group-item {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #0e5b77;
+  font-weight: 600;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.grubmenu-container .list-group-item span {
+  font-weight: bold;
+  color: #0e5b77;
+}
+
+.grubmenu-container .list-group-item:hover {
+  background-color: #c22034;
+  color: #fff;
+}
+
+.grubmenu-container .list-group-item:hover small {
+  color: #ffe0e0;
+}
+
+.grubmenu-container .list-group-item:hover span {
+  color: #fff;
+}
+
+.grubmenu-container .row {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .grubmenu-container {
+    padding: 0 10px;
+  }
+  .grubmenu-container h3 {
+    font-size: 1.5rem;
+  }
+  .grubmenu-content {
+    padding: 20px;
+  }
+}
+
+
 /* Footer Media Queries */
 @media screen and (max-width: 991px) {
   footer a {
