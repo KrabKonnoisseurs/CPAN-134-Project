@@ -216,7 +216,9 @@ footer a {
   height: fit-content;
 }
 .top-footer img {
-  width: 35px;
+  max-width: 30px;
+  margin-bottom: 4.75px;
+  margin-top: 4.25px;
 }
 .bot-footer {
   background-color: #1d789a;
@@ -294,12 +296,23 @@ footer a {
   margin-bottom: 20px;
 }
 /* Nutrition Page */
-.nutrition-table {
-    margin-top: 30px;
+.nutrition-container {
+  background: url(images/BG/BGDesktop.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 50;
 }
-.nutrition-table th, .nutrition-table td {
-    text-align: center;
-    vertical-align: middle;
+.nutrition-container .accordion .filter {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.nutrition-container .nutrition-content {
+  padding: 50px 100px 50px 100px;
+}
+.nutrition-container .nutrition-content .filter {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 15px 25px;
 }
 /* Rewards Page */
 .rewards-container {
@@ -324,6 +337,7 @@ footer a {
   border: 2px solid #0e5b77;
   border-radius: 8px;
   margin-bottom: 15px;
+  height: 95%;
 }
 .rewards-container .card img {
   margin-right: 7px;
@@ -348,6 +362,9 @@ footer a {
   }
   .bot-footer p {
     font-size: 13px;
+  }
+  .top-footer img {
+    width: 52.5%;
   }
 }
 @media screen and (max-width: 800px) {
@@ -512,9 +529,6 @@ footer a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
-  .top-footer img {
-    width: 25px;
   }
 }
 @media (max-width: 576px) {

@@ -43,7 +43,9 @@
           <a class="nav-link" href="menu.html">Menu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="nutrition.html">Nutrition</a>
+          <a class="nav-link active" aria-current="page" href="nutrition.html"
+            >Nutrition</a
+          >
         </li>
         <li class="nav-item">
           <a class="nav-link" href="rewards.html">Rewards</a>
@@ -91,7 +93,9 @@
       <nav class="menu">
         <hr class="top" />
         <a href="menu.html" class="menu-item">Menu</a>
-        <a href="nutrition.html" class="menu-item">Nutrition</a>
+        <a href="nutrition.html" class="menu-item active" aria-current="page"
+          >Nutrition</a
+        >
         <a href="rewards.html" class="menu-item">Rewards</a>
         <a href="about.html" class="menu-item">About Us</a>
         <a href="contact.html" class="menu-item">Contact Us</a>
@@ -117,56 +121,324 @@
         >
       </nav>
     </div>
-    <div class="container-fluid nutrition-table">
-      <h2 class="text-center mb-4">Our Menu Nutritional Information</h2>
-      <table class="table table-bordered table-striped">
-        <thead class="table-dark">
-          <tr>
-            <th scope="col">Menu Item</th>
-            <th scope="col">Calories</th>
-            <th scope="col">Fat (g)</th>
-            <th scope="col">Carbs (g)</th>
-            <th scope="col">Protein (g)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Krabby Patty</td>
-            <td>550</td>
-            <td>22</td>
-            <td>45</td>
-            <td>25</td>
-          </tr>
-          <tr>
-            <td>Chum Bucket</td>
-            <td>700</td>
-            <td>32</td>
-            <td>50</td>
-            <td>18</td>
-          </tr>
-          <tr>
-            <td>Double Krabby Patty</td>
-            <td>850</td>
-            <td>40</td>
-            <td>55</td>
-            <td>35</td>
-          </tr>
-          <tr>
-            <td>Clams on the Side</td>
-            <td>120</td>
-            <td>4</td>
-            <td>10</td>
-            <td>8</td>
-          </tr>
-          <tr>
-            <td>Krusty Fries</td>
-            <td>300</td>
-            <td>18</td>
-            <td>35</td>
-            <td>5</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="blur-content container-fluid px-0 py-0 mx-0 my-0">
+      <h1 class="text-center display-3 text-white title pb-4 pt-3 mb-0 mx-0">
+        Nutrition
+      </h1>
+      <div class="nutrition-container">
+        <div class="nutrition-content">
+
+          <div class="mb-4 filter">
+            <label for="calorieRange" class="form-label text-white display-6">
+              Filter by Calories
+            </label>
+            <input
+              type="range"
+              class="form-range"
+              id="calorieRange"
+              min="0"
+              max="1300"
+              value="1300"
+              step="50"
+            />
+            <p class="h6">Max Calories: <span id="calorieValue">1300</span> Cal</p>
+          </div>
+
+          <div class="col-md-6 w-100">
+            <h4 class="display-6 text-white">Menu Categories</h4>
+
+            <div class="accordion" id="menuAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingKrustyBurgers">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseKrustyBurgers"
+                    aria-expanded="false"
+                    aria-controls="collapseKrustyBurgers"
+                  >
+                    Krusty Krab Meals
+                    <span class="badge bg-primary ms-2" id="krustyMainCount"
+                      >0</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="collapseKrustyBurgers"
+                  class="accordion-collapse collapse"
+                >
+                  <div class="accordion-body">
+                    <div
+                      class="row d-flex justify-content-center align-content-center text-center"
+                      id="krustyBurgersList"
+                    >
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Calories</th>
+                            <th scope="col">Fat</th>
+                            <th scope="col">Carbs</th>
+                            <th scope="col">Protein</th>
+                          </tr>
+                        </thead>
+                        <tbody id="krustyBurgersList">
+                          <tr data-calories="500">
+                            <td>Krabby Patty</td>
+                            <td>500 Cal</td>
+                            <td>22g</td>
+                            <td>45g</td>
+                            <td>25g</td>
+                          </tr>
+
+                          <tr data-calories="618">
+                            <td>Krabby Patty w/ Cheese</td>
+                            <td>618 Cal</td>
+                            <td>28g</td>
+                            <td>48g</td>
+                            <td>30g</td>
+                          </tr>
+
+                          <tr data-calories="800">
+                            <td>Double Krabby Patty</td>
+                            <td>800 Cal</td>
+                            <td>38g</td>
+                            <td>55g</td>
+                            <td>40g</td>
+                          </tr>
+
+                          <tr data-calories="918">
+                            <td>Double Krabby Patty w/ Cheese</td>
+                            <td>918 Cal</td>
+                            <td>42g</td>
+                            <td>58g</td>
+                            <td>45g</td>
+                          </tr>
+
+                          <tr data-calories="1100">
+                            <td>Triple Krabby Patty</td>
+                            <td>1100 Cal</td>
+                            <td>55g</td>
+                            <td>60g</td>
+                            <td>55g</td>
+                          </tr>
+
+                          <tr data-calories="1218">
+                            <td>Triple Krabby Patty w/ Cheese</td>
+                            <td>1218 Cal</td>
+                            <td>60g</td>
+                            <td>65g</td>
+                            <td>60g</td>
+                          </tr>
+
+                          <tr data-calories="600">
+                            <td>Krusty Deluxe</td>
+                            <td>600 Cal</td>
+                            <td>25g</td>
+                            <td>48g</td>
+                            <td>30g</td>
+                          </tr>
+
+                          <tr data-calories="540">
+                            <td>Krusty Dog</td>
+                            <td>540 Cal</td>
+                            <td>23g</td>
+                            <td>42g</td>
+                            <td>26g</td>
+                          </tr>
+
+                          <tr data-calories="720">
+                            <td>Footlong</td>
+                            <td>720 Cal</td>
+                            <td>35g</td>
+                            <td>50g</td>
+                            <td>40g</td>
+                          </tr>
+
+                          <tr data-calories="777">
+                            <td>Sailor's Surprise</td>
+                            <td>777 Cal</td>
+                            <td>33g</td>
+                            <td>55g</td>
+                            <td>35g</td>
+                          </tr>
+
+                          <tr data-calories="820">
+                            <td>Golden Loaf</td>
+                            <td>820 Cal</td>
+                            <td>40g</td>
+                            <td>58g</td>
+                            <td>45g</td>
+                          </tr>
+
+                          <tr data-calories="935">
+                            <td>Krusty Pizza</td>
+                            <td>935 Cal</td>
+                            <td>45g</td>
+                            <td>65g</td>
+                            <td>50g</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingKrustySides">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseKrustySides"
+                    aria-expanded="false"
+                    aria-controls="collapseKrustySides"
+                  >
+                    Krusty Krab Sides
+                    <span class="badge bg-primary ms-2" id="krustySidesCount"
+                      >0</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="collapseKrustySides"
+                  class="accordion-collapse collapse"
+                >
+                  <div class="accordion-body">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">Item</th>
+                          <th scope="col">Calories</th>
+                          <th scope="col">Fat</th>
+                          <th scope="col">Carbs</th>
+                          <th scope="col">Protein</th>
+                        </tr>
+                      </thead>
+                      <tbody id="krustySidesList">
+                        <tr data-calories="305">
+                          <td>Small Coral Bits</td>
+                          <td>305 Cal</td>
+                          <td>15g</td>
+                          <td>35g</td>
+                          <td>5g</td>
+                        </tr>
+                        <tr data-calories="405">
+                          <td>Medium Coral Bits</td>
+                          <td>405 Cal</td>
+                          <td>20g</td>
+                          <td>45g</td>
+                          <td>7g</td>
+                        </tr>
+                        <tr data-calories="505">
+                          <td>Large Coral Bits</td>
+                          <td>505 Cal</td>
+                          <td>25g</td>
+                          <td>55g</td>
+                          <td>9g</td>
+                        </tr>
+                        <tr data-calories="350">
+                          <td>Kelp Rings</td>
+                          <td>350 Cal</td>
+                          <td>18g</td>
+                          <td>40g</td>
+                          <td>6g</td>
+                        </tr>
+                        <tr data-calories="415">
+                          <td>Krabby Fries</td>
+                          <td>415 Cal</td>
+                          <td>22g</td>
+                          <td>45g</td>
+                          <td>8g</td>
+                        </tr>
+                        <tr data-calories="150">
+                          <td>Salty Sauce</td>
+                          <td>150 Cal</td>
+                          <td>8g</td>
+                          <td>10g</td>
+                          <td>2g</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingDrinks">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseDrinks"
+                    aria-expanded="false"
+                    aria-controls="collapseDrinks"
+                  >
+                    Krusty Krab Drinks
+                    <span class="badge bg-primary ms-2" id="drinksCount"
+                      >0</span
+                    >
+                  </button>
+                </h2>
+                <div id="collapseDrinks" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">Item</th>
+                          <th scope="col">Calories</th>
+                          <th scope="col">Fat</th>
+                          <th scope="col">Carbs</th>
+                          <th scope="col">Protein</th>
+                        </tr>
+                      </thead>
+                      <tbody id="drinksList">
+                        <tr data-calories="150">
+                          <td>Kelp Shake</td>
+                          <td>150 Cal</td>
+                          <td>5g</td>
+                          <td>25g</td>
+                          <td>5g</td>
+                        </tr>
+                        <tr data-calories="115">
+                          <td>Small Seafoam Soda</td>
+                          <td>115 Cal</td>
+                          <td>2g</td>
+                          <td>28g</td>
+                          <td>0g</td>
+                        </tr>
+                        <tr data-calories="245">
+                          <td>Medium Seafoam Soda</td>
+                          <td>245 Cal</td>
+                          <td>10g</td>
+                          <td>40g</td>
+                          <td>2g</td>
+                        </tr>
+                        <tr data-calories="375">
+                          <td>Large Seafoam Soda</td>
+                          <td>375 Cal</td>
+                          <td>18g</td>
+                          <td>50g</td>
+                          <td>3g</td>
+                        </tr>
+                        <tr data-calories="305">
+                          <td>Krusty MilkShake</td>
+                          <td>305 Cal</td>
+                          <td>14g</td>
+                          <td>30g</td>
+                          <td>7g</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <footer class="footer">
       <div class="container-fluid top-footer">
@@ -274,6 +546,11 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz4fnFO9gyb3dC9VgP1vTzI1jj7LUxB3JXXpoDle6vL7pP07C46T3zGJOk"
       crossorigin="anonymous"
     ></script>
   </body>
