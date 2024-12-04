@@ -3,11 +3,14 @@ body {
     background-image:url(https://i.etsystatic.com/10868806/r/il/6e5775/4079544308/il_fullxfull.4079544308_c7w1.jpg);
     background-size: cover;
     background-position: center;
+    justify-content: center;
+    align-items: center;
 }
 
 #nav-bar {
     background-color: white;
     color: black;
+    
 }
 
 .nav-link img {
@@ -30,6 +33,7 @@ form {
     border-radius: 7px;
     box-shadow: 0px 4px 6px rgba(red, green, blue, alpha);
     margin-bottom: 25px;
+    background-color: aquamarine;
 }
 
 h1 {
@@ -41,11 +45,94 @@ h1 {
 
 form .btn-btn-primary:hover {
     background-color: blueviolet;
-    color: white;
+    color: red;
     font-weight: bold;
     padding: 12px;
     border-radius: 3px;
 }
 
+footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-style: normal;
+    font-family: "Palanquin", sans-serif;
+  }
+  footer i {
+    font-size: 25px;
+    font-style: normal;
+    font-family: "Palanquin", sans-serif;
+  }
+  footer a {
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    font-family: "Palanquin", sans-serif;
+  }
+  .top-footer {
+    background-color: #0e5b77;
+    color: #fff;
+    height: fit-content;
+  }
+  .top-footer img {
+    width: 35px;
+  }
+  .bot-footer {
+    background-color: #1d789a;
+    color: #fff;
+    height: fit-content;
+    font-size: 14px;
+  }
+  .bot-footer a {
+    font-weight: 300;
+  }
+  .bot-footer p {
+    font-weight: 300;
+    font-style: normal;
+    font-family: "Palanquin", sans-serif;
+  }
+  .footer-links {
+    margin: 0;
+    padding: 7px 0 7px 0;
+  }
+  .bot-footer .footer-links {
+    font-weight: 400;
+    display: inline-block;
+  }
+  .bot-footer .footer-links .list-inline-item:hover {
+    text-decoration: underline;
+  }
 
+ .card {
+    margin-top: 27px;
+    border: none;
+    border-radius: 7px;
+ }
+ 
+ .card-body {
+    background-color: gray;
+    color: black;
+    padding-left: 18px;
+ }
     
+
+ 
+ @media (max-width: 767px) {
+    form {
+        width: 87px;
+        padding: 10px;
+    }
+
+    #nav-bar {
+        flex-wrap: wrap;
+    }
+    .nav-link {
+        margin-right: 4px;
+        font-size: small;
+    }
+    .footer-links {
+        margin-bottom: 10px;
+    }
+ }
+
