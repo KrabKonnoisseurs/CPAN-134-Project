@@ -300,7 +300,6 @@ footer a {
   background: url(images/BG/BGDesktop.png);
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 50;
 }
 .nutrition-container .accordion .filter {
   margin-left: 50px;
